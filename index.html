@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div id="logo">TaskManager</div>
+            <div class="theam">
+                <span id="dark"><i class="ri-moon-fill"></i></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="task-detail">
+            <div class="stat-card completed-task">
+                <div class="icon"><i class="ri-checkbox-line"></i></div>
+                <div class="info">
+                    <h3>Completed</h3>
+                    <p id="completedCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card pending-task">
+                <div class="icon"><i class="ri-timer-line"></i></div>
+                <div class="info">
+                    <h3>Pending</h3>
+                    <p id="pendingCount">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card new-task">
+                <div class="icon"><i class="ri-todo-line"></i></div>
+                <div class="info">
+                    <h3>Total Tasks</h3>
+                    <p id="totalCount">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="form">
+                <h2>Task Form</h2>
+
+                <form id="taskForm">
+                    <input type="text" placeholder="Task Name" id="taskName">
+                    <textarea placeholder="Task Description" id="taskDesc"></textarea>
+                    <button type="submit">Add Task</button>
+                </form>
+
+            </div>
+
+            <div class="cards">
+                <form action="" id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search tasks...">
+
+                    <button type="submit">
+                        Search
+                    </button>
+                </form>
+                <section class="task-sec">
+
+                </section>
+            </div>
+        </div>
+        <div class="formEdit">
+            <form id="editForm">
+                <input type="text" placeholder="Task Name" id="etaskName">
+                <textarea placeholder="Task Description" id="etaskDesc"></textarea>
+                <button class="edit-btn">Edit Task</button>
+                <button type="button" class="cancle-btn">Cancle</button>
+            </form>
+        </div>
+        <section class="render-flow">
+            <h2>Browser Rendering Process</h2>
+
+            <div class="flow-container">
+
+                <div class="flow-box">HTML
+                    <hr>
+                    <p>Browser receives HTML code.</p>
+                </div>
+                <span><i class="ri-arrow-down-long-line"></i></span>
+
+                <div class="flow-box">Parsing
+                    <hr>
+                    <p>Browser reads the HTML.</p>
+                </div>
+                <span><i class="ri-arrow-down-long-line"></i></span>
+
+                <div class="flow-box">Tokenization
+                    <hr>
+                    <p>HTML is broken into tokens (tags, attributes, text).</p>
+                </div>
+                <span><i class="ri-arrow-down-long-line"></i></span>
+
+                <div class="flow-box">DOM Tree
+                    <hr>
+
+                    <p>Browser creates the Document Object Model tree.Browser creates the Document Object Model tree.
+                    </p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="flow-box">CSS
+                    <hr>
+
+                    <p>Browser loads CSS files.</p>
+                </div>
+                <span><i class="ri-arrow-down-long-line"></i></span>
+
+                <div class="flow-box">CSSOM Tree
+                    <hr>
+
+                    <p>Browser converts CSS into a CSS Object Model tree.</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="flow-box final">
+                    DOM Tree + CSSOM Tree
+                    <hr>
+                    <p>Browser combines structure and styles.</p>
+                </div>
+
+                <span><i class="ri-arrow-down-long-line"></i></span>
+
+                <div class="flow-box render">
+                    Render Tree
+                    <hr>
+                    <p>Final tree used to paint elements on the screen. </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
